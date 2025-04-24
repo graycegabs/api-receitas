@@ -1,4 +1,4 @@
-# 🍽️ API de Receitas com Flask
+# 🍽️ API de Receitas
 
 Este projeto é uma API simples de gerenciamento de receitas culinárias, desenvolvida em Python com Flask. A API permite criar, listar, atualizar e deletar ingredientes e receitas, além de fornecer documentação automática com Swagger.
 
@@ -14,37 +14,26 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## Endpoints
 
-```
-📁 api-receitas/
-├── app.py                # Arquivo principal que inicia o app
-├── requirements.txt      # Dependências do projeto
-├── config.py             # Configurações da aplicação
-├── models/               # Modelos do banco de dados
-│   └── models.py
-├── routes/               # Rotas organizadas por entidade
-│   ├── ingrediente_routes.py
-│   └── receita_routes.py
-├── database/
-│   └── db.py             # Banco de dados SQLite (criado automaticamente)      
-├── instance/
-│   └── receitas.db
-```
+- `POST /ingredientes`: Criar um ingrediente
+- `GET /ingredientes`: Listar todos os ingredientes
+- `PUT /ingredientes/{id}`: Atualizar um ingrediente
+- `DELETE /ingredientes/{id}`: Deletar um ingrediente
+- `POST /receitas`: Criar uma receita
+- `GET /receitas`: Listar todas as receitas
+- `DELETE /receitas/{id}`: Deletar uma receita
 
----
+## Como rodar a API
 
-## 📦 Configurando o ambiente virtual
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-```
+### 1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/api-receitas.git
+   ```
 
 ---
 
-## 🚀 Instalando as dependências do projeto
+### 2. 🚀 Instale as dependências do projeto
 
 ```bash
 pip install -r requirements.txt
@@ -52,11 +41,12 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Executando o projeto localmente
+### 3. ▶️ Execute o projeto localmente
 
 ```bash
 python app.py
 ```
+---
 
 A aplicação estará disponível em: [http://localhost:5000](http://localhost:5000)
 
@@ -64,48 +54,9 @@ A aplicação estará disponível em: [http://localhost:5000](http://localhost:5
 
 ## 📚 Acessando a documentação Swagger
 
-A documentação da API é gerada automaticamente pelo Flask-RESTX e está disponível logo na rota raiz:
+A documentação da API é gerada automaticamente pelo Flask-RESTX e estará disponível logo na rota raiz:
 
 [http://localhost:5000](http://localhost:5000)
-
----
-
-## 🧪 Testando a API com Postman
-
-### ✅ Criar ingrediente (POST /ingredientes)
-```json
-{
-  "nome": "Açúcar",
-  "unidade": "gramas"
-}
-```
-
-### 📃 Listar ingredientes (GET /ingredientes)
-Retorna uma lista com todos os ingredientes cadastrados.
-
-### ✅ Criar receita (POST /receitas)
-```json
-{
-  "nome": "Bolo de Chocolate",
-  "modo_preparo": "Misture tudo e asse por 40 minutos.",
-  "ingredientes": [
-    {
-      "ingrediente_id": 1,
-      "quantidade": 200
-    },
-    {
-      "ingrediente_id": 2,
-      "quantidade": 3
-    }
-  ]
-}
-```
-
-### 📃 Listar receitas (GET /receitas)
-Retorna todas as receitas com ingredientes detalhados.
-
-### ❌ Deletar receita (DELETE /receitas/{id})
-Exclui uma receita específica pelo seu ID.
 
 ---
 
