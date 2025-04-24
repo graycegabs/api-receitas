@@ -28,7 +28,7 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
 
 ### 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/api-receitas.git
+   git clone https://github.com/graycegabs/api-receitas.git
    ```
 
 ---
