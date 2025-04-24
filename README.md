@@ -6,7 +6,7 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Python 3.x
+- Python 3.10+
 - Flask
 - Flask-SQLAlchemy
 - Flask-RESTX (para documentação Swagger)
@@ -32,8 +32,15 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
    ```
 
 ---
+### 2. Crie um ambiente virtual (opcional, mas recomendado)
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+```
+---
 
-### 2. 🚀 Instale as dependências do projeto
+### 3. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
@@ -41,18 +48,17 @@ pip install -r requirements.txt
 
 ---
 
-### 3. ▶️ Execute o projeto localmente
+### 4. Execute a aplicação
 
 ```bash
 python app.py
 ```
+
+A API estará disponível em: [http://localhost:5000](http://localhost:5000)
+
 ---
 
-A aplicação estará disponível em: [http://localhost:5000](http://localhost:5000)
-
----
-
-## 📚 Acessando a documentação Swagger
+### 📚 Acessando a documentação Swagger
 
 A documentação da API é gerada automaticamente pelo Flask-RESTX e estará disponível logo na rota raiz:
 
@@ -60,6 +66,39 @@ A documentação da API é gerada automaticamente pelo Flask-RESTX e estará dis
 
 ---
 
+## 🧪 Exemplos de requisições no Postman
+### ✅ Criar ingrediente (POST /ingredientes)
+```json
+{
+  "nome": "Açúcar",
+  "unidade": "gramas"
+}
+```
+
+### 📃 Listar ingredientes (GET /ingredientes)
+---
+### ✅ Criar receita (POST /receitas)
+```json
+{
+  "nome": "Bolo de Chocolate",
+  "modo_preparo": "Misture tudo e asse por 40 minutos.",
+  "ingredientes": [
+    {
+      "ingrediente_id": 1,
+      "quantidade": 200
+    },
+    {
+      "ingrediente_id": 2,
+      "quantidade": 3
+    }
+  ]
+}
+```
+### 📃 Listar receitas (GET /receitas)
+---
+### ❌ Deletar receita (DELETE /receitas/{id})
+---
+
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo conforme necessário.
+Este projeto está sob a licença MIT.
