@@ -97,8 +97,3 @@ A documentação da API é gerada automaticamente pelo Flask-RESTX e estará dis
 ### 📃 Listar receitas (GET /receitas)
 ---
 ### ❌ Deletar receita (DELETE /receitas/{id})
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
