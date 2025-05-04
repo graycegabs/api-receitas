@@ -10,7 +10,7 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
 - Flask
 - Flask-SQLAlchemy
 - Flask-RESTX (para documentação Swagger)
-- SQLite (banco de dados leve embutido)
+- SQLite (banco de dados)
 
 ---
 
