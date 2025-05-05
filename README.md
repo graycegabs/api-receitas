@@ -10,7 +10,7 @@ Este projeto é uma API simples de gerenciamento de receitas culinárias, desenv
 - Flask
 - Flask-SQLAlchemy
 - Flask-RESTX (para documentação Swagger)
-- SQLite (banco de dados leve embutido)
+- SQLite (banco de dados)
 
 ---
 
@@ -97,8 +97,3 @@ A documentação da API é gerada automaticamente pelo Flask-RESTX e estará dis
 ### 📃 Listar receitas (GET /receitas)
 ---
 ### ❌ Deletar receita (DELETE /receitas/{id})
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
