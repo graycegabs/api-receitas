@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+venv/
+.git
+*.md
+docker-compose.yml
+*.py
+.env
+*.db
+*.sqlite3
+instance/
