@@ -26,4 +26,3 @@ jobs:
       - name: Run pylint
         run: |
           pylint app.py 
-      
